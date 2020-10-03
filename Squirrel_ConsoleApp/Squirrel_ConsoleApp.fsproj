@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Squirrel_DomainLogic\Squirrel_DomainLogic.fsproj" />
+    <ProjectReference Include="..\Squirrel_DomainLogic\Squirrel_DomainLogic.fsproj" />
   </ItemGroup>
 
 </Project>

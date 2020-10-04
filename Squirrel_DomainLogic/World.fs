@@ -1,4 +1,4 @@
-﻿namespace Squirell_DomainLogic
+﻿namespace Squirrel_DomainLogic
 
 open System
 open Squirrel_DomainLogic.Actors

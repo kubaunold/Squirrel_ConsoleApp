@@ -2,14 +2,21 @@
 
 open Squirrel_DomainLogic.WorldPos
 
-[<AbstractClass>]
-type Actor(pos: WorldPos) =
-    member this.Pos = pos
-    abstract member Character: char
+type ActorKind =
+  | Squirrel of hasAcorn:bool
+  | Tree
+  | Acorn
+  | Rabbit
+  | Doggo
 
-type Squirrel(pos: WorldPos, hasAcorn: bool) =
-    inherit Actor(pos)
-    member this.HasAcorn = hasAcorn
-    override this.Character = 'S'
+type Actor =
+  { Pos : WorldPos
+    ActorKind : ActorKind }
 
-let createSquirrel pos = new Squirrel(pos, false)
+let getChar actor =
+  match actor.ActorKind with
+  | Squirrel _ -> 'S'
+  | Tree _ -> 't'
+  | Acorn _ -> 'a'
+  | Rabbit _ -> 'R'
+  | Doggo _ -> 'D'

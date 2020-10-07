@@ -1,5 +1,6 @@
 ﻿open System
 open Squirrel_DomainLogic.World
+open Squirrel_DomainLogic.Simulator
 open Squirrel_ConsoleApp.Display
 
 let generateWorld randomizer =

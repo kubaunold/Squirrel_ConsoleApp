@@ -14,10 +14,14 @@ let displayWorld (world: World) =
     printfn ""
     for y in 1..world.MaxX do
     for x in 1..world.MaxY do   
-      let char = world.GetCharacterAtCell(x, y)
+      let char = getCharacterAtCell(x, y) world
       printCell char (x = world.MaxX)
 
-let getUserInput(): ConsoleKeyInfo =
-    printfn ""
-    printfn "Press R to regenerate or X to exit"  
-    Console.ReadKey(true)  
+let getUserInput(world: World): ConsoleKeyInfo =
+  displayWorld world
+  printfn ""
+  printfn "Press Arrow Keys to move, R to regenerate, or X to exit"
+
+  let key = Console.ReadKey(true)
+  Console.Clear()
+  key

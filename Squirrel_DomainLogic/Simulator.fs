@@ -29,9 +29,8 @@ let moveActor world actor xDiff yDiff =
 
 type GameCommand =
   | MoveLeft | MoveRight
-  | MoveUp | MoveDown
-  | MoveUpLeft | MoveUpRight
-  | MoveDownLeft | MoveDownRight
+  | MoveUp | MoveUpLeft | MoveUpRight
+  | MoveDown | MoveDownLeft | MoveDownRight
   | Wait
   | Restart
 

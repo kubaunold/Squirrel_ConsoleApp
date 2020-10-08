@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Squirrel_DomainLogic\Squirrel_DomainLogic.fsproj" />
+    <ProjectReference Include="..\Squirrel_xUnitTests\Squirrel_xUnitTests.fsproj" />
   </ItemGroup>
 
 </Project>
